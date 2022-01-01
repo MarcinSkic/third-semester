@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+float functionRoot(float x){
+    return (pow(x)-7);
+}
+
+int main()
+{
+    int a = 0,b = 2;
+    if(!functionRoot(a)*functionRoot(b)<0){
+
+    }
+}
