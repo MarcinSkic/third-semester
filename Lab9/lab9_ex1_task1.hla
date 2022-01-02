@@ -1,0 +1,21 @@
+program lab9_ex1_task1;
+#include("stdlib.hhf");
+static
+	amount : int8;
+	c : char;
+	
+procedure printChars(amount: int8; c: char);
+begin printChars;
+	mov(amount,ah);
+	for(mov(0,al); al<ah ;inc(al)) do
+		stdout.put(c);
+	endfor;
+end printChars;
+begin lab9_ex1_task1;
+	stdout.put("Podaj znak: ");
+	stdin.get(c);
+	stdout.put("Powiedz ile razy wypisac go: ");
+	stdin.get(amount);
+	printChars(amount,c);
+	
+end lab9_ex1_task1;

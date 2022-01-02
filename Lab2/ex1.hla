@@ -1,0 +1,23 @@
+program exercise1;
+	#include("stdlib.hhf");
+	static
+		oneByte:	int8	:= -7;
+		twoByte:	int16	:=	-277;
+		threeByte:	int32	:=	-66000;
+begin exercise1;
+	stdout.put("Poczatkowe wartosci: ",oneByte,", ",twoByte,", ",threeByte,nl);
+	mov(0,al);
+	sub(oneByte,al);
+	mov(al,oneByte);
+	mov(0,ax);
+	sub(twoByte,ax);
+	mov(ax,twoByte);
+	mov(0,eax);	
+	sub(threeByte,eax);	
+	mov(eax,threeByte);
+	stdout.put("Po zanegowaniu wartosci: ",oneByte,", ",twoByte,", ",threeByte,nl);
+	mov(threeByte,eax);
+	add(666,eax);
+	mov(eax,threeByte);
+	stdout.put("Po wykonaniu dodawania: ",threeByte);
+end exercise1;

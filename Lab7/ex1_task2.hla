@@ -1,0 +1,19 @@
+program ex1_task2;
+#include("stdlib.hhf");
+static
+	zm1	:	int8	:=	22;
+begin ex1_task2;
+	mov(100,ax);
+	div(zm1);
+	stdout.puti8(al);
+	stdout.put(":");
+	stdout.puti8(ah);
+	stdout.newln();
+	
+	mov(7,ax);
+	mov(2,al);
+	div(al,ax);
+	stdout.puti8(al);
+	stdout.put(":");
+	stdout.puti8(ah);
+end ex1_task2;

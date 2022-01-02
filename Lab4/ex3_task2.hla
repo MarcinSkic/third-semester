@@ -1,0 +1,13 @@
+program ex3_task2;
+	#include("stdlib.hhf");
+	static
+	zmienna: int8;
+begin ex3_task2;
+	stdout.put("Podaj liczbe w postaci 10: ");
+	stdin.get(zmienna);
+	forever
+		dec(zmienna);	
+		breakif(zmienna < 5);
+		stdout.put(nl,zmienna);
+	endfor;
+end ex3_task2;

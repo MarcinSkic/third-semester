@@ -1,0 +1,28 @@
+program ex2_task2;
+#include ("stdlib.hhf");
+static
+	zm1: 	int32:=	100;
+	zm2:	int32:=	200;
+procedure localVar;
+		var
+		zm1:	int32;
+		zm2:	int32;
+	begin localVar;
+
+		mov(10,zm1);
+		mov(0,zm2);
+		for(mov(0,ecx);ecx<10;inc(ecx)) do
+			stdout.put("i=",zm1,stdio.tab,"j=",zm2,nl);
+			dec(zm1);
+			inc(zm2);
+		endfor;
+	end localVar;
+	
+	
+begin ex2_task2;
+	stdout.put("Zmienne lokalne: ",nl);
+	localVar();
+	stdout.put("Zmienne globalne: ",nl);
+	stdout.put("i=",zm1,stdio.tab,"j=",zm2);
+
+end ex2_task2;

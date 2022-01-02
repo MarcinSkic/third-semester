@@ -1,0 +1,44 @@
+// Iczelion's tutorial #2: MessageBox
+
+program msgBoxDemo;
+#include( "w.hhf" )
+#include("stdlib.hhf");
+
+
+begin msgBoxDemo;
+
+	w.MessageBox
+	(
+		0,		
+	    "Czy zrozumiales zasady tworzenia komunikatow?",		// Window title.
+		"Sonda studencka",	// Text to display in window.		
+		w.MB_YESNOCANCEL | w.MB_ICONQUESTION
+	);
+	
+	if(eax == w.IDYES) then
+		w.MessageBox
+		(
+			0,		
+			"Mozemy zatem przejsc do nastepnej czesci",		// Window title.
+			"Sonda studencka",	// Text to display in window.		
+			w.MB_OK | w.MB_ICONEXCLAMATION
+		);
+	elseif(eax == w.IDNO) then
+		w.MessageBox
+		(
+			0,		
+			"Szkoda, cwicz wiecej",		// Window title.
+			"Sonda studencka",	// Text to display in window.		
+			w.MB_OK | w.MB_ICONWARNING
+		);
+	elseif(eax == w.IDCANCEL) then
+		w.MessageBox
+		(
+			0,		
+			"Nie odpowiedziales na pytanie",		// Window title.
+			"Sonda studencka",	// Text to display in window.		
+			w.MB_OK | w.MB_ICONHAND
+		);
+	endif;
+	        
+end msgBoxDemo;

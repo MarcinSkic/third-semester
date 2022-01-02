@@ -1,0 +1,25 @@
+program ex1_task1;
+	#include("stdlib.hhf");
+	static
+	zmienna: int8;
+begin ex1_task1;
+	stdout.put("Podaj liczbe w postaci 10: ");
+	stdin.get(zmienna);
+	mov(zmienna,al);
+	stdout.put("Liczba w postaci 16: ");
+	stdout.puth8(zmienna);
+	not(zmienna);
+	stdout.put(nl,"Liczba po inwersji bitow: ");
+	stdout.puth8(zmienna);
+	inc(zmienna);
+	stdout.put(nl,"Liczba po dodaniu jednosci: ");
+	stdout.puth8(zmienna);
+	stdout.put(nl,"Wynik dziesietnie: ",zmienna);
+	
+	mov(al,zmienna);
+	neg(zmienna);
+	stdout.put(nl,"Ta sama operacja z uzyciem instr. neg: ");
+	stdout.put(nl,"Wynik w postaci 16: ");
+	stdout.puth8(zmienna);
+	stdout.put(nl,"Wynik dziesietnie: ",zmienna);
+end ex1_task1;

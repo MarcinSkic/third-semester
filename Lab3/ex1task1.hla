@@ -1,0 +1,13 @@
+program ex1task1;
+#include("stdlib.hhf");
+	static
+		number: int8;
+begin ex1task1;
+	stdout.put("Podaj do zmiennej: ");
+	stdin.get(number);
+	stdout.put("Podaj do rejestru: ");
+	stdin.get(al);
+	mov(number,al);
+	stdout.put("Wyswietlenie ze zmiennej: ", number,nl);
+	stdout.put("Wyswietlenie z rejestru: ", al);
+end ex1task1;

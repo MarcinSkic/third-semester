@@ -1,0 +1,11 @@
+program pierwszy;
+	
+	#include ("stdlib.hhf");
+	static
+		zmienna_logiczna:	boolean := true;
+	
+begin pierwszy;
+	
+	stdout.put("Zmienna logiczna tego programu wynosi: ",zmienna_logiczna);
+	
+end pierwszy;

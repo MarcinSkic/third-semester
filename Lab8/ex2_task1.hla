@@ -1,0 +1,21 @@
+program ex2_task1;
+#include ("stdlib.hhf");
+static
+procedure writeChars;
+	begin writeChars;
+	
+		for(mov(0,ECX);ECX<40;inc(ecx))do
+			stdout.putc(' ');
+		endfor;
+		stdout.putc('*');
+	end writeChars;
+	
+begin ex2_task1;
+	for(mov(0,ECX);ECX<20;inc(ECX))do
+		push(ECX);
+		writeChars();
+		pop(ECX);
+		stdout.newln();
+	endfor;
+
+end ex2_task1;

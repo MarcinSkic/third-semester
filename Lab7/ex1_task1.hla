@@ -1,0 +1,17 @@
+program ex1_task1;
+#include("stdlib.hhf");
+static
+	zm1	:	int8	:=	22;
+	zm2 :	int16	:=	-100;
+begin ex1_task1;
+	mov(5,ax);
+	mul(zm1);
+	stdout.puti16(ax);
+	stdout.newln();
+	imul(zm2);
+	stdout.puti32(dx:ax);
+	mov(2,eax);
+	stdout.newln();
+	intmul(4,eax);
+	stdout.puti32(eax);
+end ex1_task1;

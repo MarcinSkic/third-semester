@@ -1,0 +1,28 @@
+program ex1_task1;
+#include("stdlib.hhf");
+static
+	zm1 : real32 := -4.87660e-2;
+	zm2 : real32 := 562.3456e1;
+	zm3 : real32 := 3.14e-15;
+begin ex1_task1;
+	stdout.put("Zmienna 1",nl,"Procedura stdout.putr32:   ");
+	stdout.putr32(zm1,10,5,'@');
+	stdout.put(nl,"Procedura stdout.pute32:   ");
+	stdout.pute32(zm1,10);
+	stdout.put(nl,"Procedura stdout.put postac dziesietna:  ",zm1:10:5);
+	stdout.put(nl,"Procedura stdout.put postac wykladnicza:  ",zm1);
+	
+	stdout.put(nl,nl,"Zmienna 2",nl,"Procedura stdout.putr32:   ");
+	stdout.putr32(zm2,10,4,'@');
+	stdout.put(nl,"Procedura stdout.pute32:   ");
+	stdout.pute32(zm2,10);
+	stdout.put(nl,"Procedura stdout.put postac dziesietna:  ",zm2:10:4);
+	stdout.put(nl,"Procedura stdout.put postac wykladnicza:  ",zm2);
+	
+	stdout.put(nl,nl,"Zmienna 3",nl,"Procedura stdout.putr32:   ");
+	stdout.putr32(zm3,20,15,'@');
+	stdout.put(nl,"Procedura stdout.pute32:   ");
+	stdout.pute32(zm3,10);
+	stdout.put(nl,"Procedura stdout.put postac dziesietna:  ",zm3:20:15);
+	stdout.put(nl,"Procedura stdout.put postac wykladnicza:  ",zm3);
+end ex1_task1;

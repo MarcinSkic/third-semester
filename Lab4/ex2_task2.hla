@@ -1,0 +1,41 @@
+program ex2_task2;
+	#include("stdlib.hhf");
+	static
+	zmienna: int8;
+begin ex2_task2;
+	stdout.put("Podaj liczbe w postaci 10: ");
+	stdin.get(zmienna);
+	mov(zmienna,al);
+	stdout.put("Wprowadzono: ",zmienna," (");
+	stdout.put(al);
+	stdout.put(")",nl);
+	
+	cbw();
+	stdout.put("Rozszerzenie do 16: ");
+	stdout.puti16(ax);
+	stdout.put(" (");
+	stdout.put(ax);
+	stdout.put(")",nl);
+	
+	cwde();
+	stdout.put("Rozszerzenie do 32: ");
+	stdout.puti32(eax);
+	stdout.put(" (");
+	stdout.put(eax);
+	stdout.put(")",nl);
+	
+	mov(zmienna,al);
+	movsx(al,ax);
+	stdout.put("Rozszerzenie do 16: ");
+	stdout.puti16(ax);
+	stdout.put(" (");
+	stdout.put(ax);
+	stdout.put(")",nl);
+	
+	movzx(ax,eax);
+	stdout.put("Rozszerzenie do 32: ");
+	stdout.puti32(eax);
+	stdout.put(" (");
+	stdout.put(eax);
+	stdout.put(")",nl);
+end ex2_task2;

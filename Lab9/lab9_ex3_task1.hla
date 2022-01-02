@@ -1,0 +1,24 @@
+program lab9_ex3_task1;
+#include("stdlib.hhf");
+static
+	c : char;
+procedure isLetter(c : char);
+@returns ("eax");
+begin isLetter;
+	if((c > 64 && c < 91) || (c > 96 && c <123)) then
+		mov(1,eax);
+	else
+		mov(0,eax);
+	endif;
+end isLetter;
+begin lab9_ex3_task1;
+	stdout.put("Podaj litere: ");
+	stdin.get(c);
+	if(isLetter(c)) then
+		stdout.put("To litera");
+	else
+		stdout.put("To nie jest litera");
+	endif;
+	
+	
+end lab9_ex3_task1;

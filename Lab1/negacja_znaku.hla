@@ -1,0 +1,18 @@
+program negacja_znaku;
+	#include ("stdlib.hhf");
+	
+	static
+		liczba:	int8;
+
+begin negacja_znaku;
+	
+	stdout.put("Podaj liczbe [-128:127]: ");
+	stdin.get(liczba);
+	
+	mov(0,al);
+	sub(liczba,al);
+	mov(al,liczba);
+	
+	stdout.put("Liczba po zmianie znaku: ",liczba);
+end negacja_znaku;
+	
