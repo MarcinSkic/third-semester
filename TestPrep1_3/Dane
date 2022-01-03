@@ -1,0 +1,4 @@
+SHIP{name='Bismarck', capacity=40000}SHIP{name='Hood', capacity=57000}SHIP{name='Bismarck', capacity=40000}
+SHIP{name='Hood', capacity=57000}
+SHIP{name='Bismarck', capacity=40000}
+SHIP{name='Hood', capacity=57000}

@@ -1,0 +1,40 @@
+ FileWriter fileWriter;
+
+        try {
+            fileWriter = new FileWriter(new File("Statki.txt"),true);
+            for (var x: stateczki
+            ) {
+                fileWriter.append(x.toString((Ship ship)->{
+                    return ship.getName()+";"+ship.getState()+";"+ship.getCapacity()+"\n";
+                }));
+            }
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        ArrayList<Ship> statki2 = new ArrayList<Ship>();
+
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(new File("Statki.txt")));
+            String linia;
+
+            while((linia = reader.readLine())!= null){
+                var tab = linia.split(";");
+                statki2.add(new Ship(tab[0],Integer.parseInt(tab[1]),Integer.parseInt(tab[2])));
+            }
+
+            reader.close();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        for (var x: statki2) {
+            System.out.println(x.toString((Ship ship)->{
+                return ship.getState()+","+ship.getCapacity()+","+ship.getName();
+            }));
+
+        }

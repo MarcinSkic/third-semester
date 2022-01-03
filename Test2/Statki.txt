@@ -1,0 +1,4 @@
+Titanic;1;2000
+Merlin;0;1000
+Vandal;1;200
+Apoxor;0;500
