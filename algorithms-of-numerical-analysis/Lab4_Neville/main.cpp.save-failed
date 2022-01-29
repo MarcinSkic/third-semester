@@ -1,0 +1,92 @@
+#include <iostream>
+
+using namespace std;
+
+void Neville(int n, int p, int xTab[], int fTab[]);
+int main()
+{
+    /*
+    int n;
+    cout<<"Podaj n: ";
+    cin>>n;
+    n++;
+
+    int x[n];
+    cout<<"Podaj wezly x: \n";
+    for(int i = 0; i < n;i++){
+        cin>>x[i];
+    }
+
+    int f[n];
+    cout<<"Podaj wartosci funkcji f: \n";
+    for(int i = 0; i < n;i++){
+        cin>>f[i];
+    }
+
+    int p;
+    cout<<"Podaj punkt p: ";
+    cin>>p;
+    */
+    int n = 5;
+    float x[n];
+    float f[n];
+    float p = -3;
+    x[0] = -3;
+    x[1] = -1;
+    x[2] = 0;
+    x[3] = 2;
+    x[4] = 4;
+
+    f[0] = -17;
+    f[1] = 9;
+    f[2] = 17;
+    f[3] = 23;
+    f[4] = 25;
+    Neville(n,p,x,f);
+}
+bool CheckIfCorrect(int n, int p, int xTab[]){
+
+    for(int i = 1; i < n; i++){
+        if(xTab[i-1] >= xTab[i]){
+            cout<<"Zle wezly";
+            return false;
+        }
+    }
+    if(p<xTab[0] || p>xTab[n-1]){
+        cout<<"Zly punkt";
+        return false;
+    }
+    return true;
+}
+void Neville(int n, float p, float xTab[], float fTab[]){
+
+    if(!CheckIfCorrect(n,p,xTab)){
+        return;
+    }
+
+    int ir[n];
+
+
+    for(int i = 0; i < n; i++){
+        ir[i] = fTab[i];
+    }
+
+    int result = ir[0], multiply = 1;
+
+    n--;
+
+    for(int i = 1; i <= n; i++){
+        for(int k = 0; k <=n-i;k++){
+            ir[k] = ((p-xTab[k])*ir[k+1]-(1-xTab[i+k])*ir[k])/(xTab[k+i]-xTab[i]);
+        }
+    }
+    for(int i = 0; i <= n;i++){
+        cout<<ir[i]<<" ";
+    }
+    /*for(int i = 1; i <= n; i++){
+        multiply *= (p-xTab[i-1]);
+        result += (ir[i]*multiply);
+    }*/
+
+    cout<<"Wynik wynosi: "<<result;
+}
