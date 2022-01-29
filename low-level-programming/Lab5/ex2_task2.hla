@@ -1,0 +1,24 @@
+program ex2_task2;
+#include("stdlib.hhf");
+static
+	znak:	char;
+	
+begin ex2_task2;
+	stdout.put("Podaj znaki [@ konczy petle]: ");
+	
+	forever
+		stdin.readLn();
+		stdin.get(znak);
+		breakif(znak == '@');		
+		if(znak < 65 || znak > 91) then
+			stdout.put("Zly znak",nl);
+		else
+			or(32,znak);
+			
+			stdout.put("Wynik: ");
+			stdout.putc(znak);
+			stdout.newln();
+		endif;	
+	endfor;
+	
+end ex2_task2;

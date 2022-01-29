@@ -1,0 +1,6 @@
+procedure multiplication(a: int8; b: int16);
+begin multiplication;
+	mov(b,ax);
+	mul(a);
+	stdout.puti16(ax);
+end multiplication;

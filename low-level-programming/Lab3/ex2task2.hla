@@ -1,0 +1,9 @@
+program ex2task2;
+#include("stdlib.hhf");
+begin ex2task2;
+	stdout.put("Podaj wartosc w zapisie szesnastkowym: ");
+	stdin.get(ax);
+	stdout.put("Wyswietlenie wartosci w zapisie szesnastkowym: ", ax,nl);
+	stdout.put("Wyswietlenie wartosci w zapisie dziesietnym: ");
+	stdout.puti16(ax);
+end ex2task2;

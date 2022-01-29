@@ -1,0 +1,32 @@
+program ex1_task2;
+#include ("stdlib.hhf");
+static
+	tab: int32[256];
+	i: int32 := 1;
+procedure zero;
+	begin zero;
+		for (mov(ebx,ecx); ecx<256; inc(ecx)) do
+			mov(0,tab[ecx*4]);
+		endfor;
+		
+		exit zero;
+	end zero; //zerowanie tablicy
+	
+begin ex1_task2;
+	mov(100,ebx);
+	for (mov(0,ecx); ecx<256; inc(ecx)) do
+		mov(i,tab[ecx*4]);
+		inc(i);
+	endfor; //wczytanie wartosci do tablicy
+	
+	for (mov(0,ecx);ecx<256;inc(ecx)) do
+		stdout.put(tab[ecx*4],' ')
+	endfor; //wyswietlanie tablicy
+	
+	zero();	
+	stdout.newln();
+	
+	for (mov(0,ecx);ecx<256;inc(ecx)) do
+		stdout.put(tab[ecx*4],' ')
+	endfor; //wyswietlanie tablicy po zerowaniu
+end ex1_task2;

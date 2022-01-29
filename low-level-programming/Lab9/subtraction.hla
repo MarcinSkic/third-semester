@@ -1,0 +1,6 @@
+procedure subtraction(a: int16; b: int16);
+begin subtraction;
+	mov(b,ax);
+	sub(a,ax);
+	stdout.puti16(ax);
+end subtraction;

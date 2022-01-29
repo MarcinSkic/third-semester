@@ -1,0 +1,10 @@
+program ex2_task1;
+	#include("stdlib.hhf");
+	static
+	index:	int8	:=	10;
+begin ex2_task1;
+	while	(index >= 1)	do
+		stdout.put(index:10);
+		dec(index);
+	endwhile;
+end ex2_task1;

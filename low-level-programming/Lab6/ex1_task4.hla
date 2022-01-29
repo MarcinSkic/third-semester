@@ -1,0 +1,38 @@
+program ex1_task4;
+#include("stdlib.hhf");
+static
+	tab8:	int8[10] := [0,1,2,3,4,5,6,7,8,9];
+	tab32:	int32[10] := 10 dup [1];
+	ind:	int32 := 0;
+	temp:	int8;
+begin ex1_task4;
+	mov(0,ebx);
+	forever
+		stdout.put(tab8[ebx*1]," ");
+		inc(ebx);
+		breakif(ebx == 10);
+	endfor;
+	stdout.put(nl);
+	
+	mov(0,ebx);
+	forever
+		stdout.put(tab32[ebx*4]," ");
+		inc(ebx);
+		breakif(ebx == 10);
+	endfor;
+	stdout.put(nl);
+	
+	stdout.put("Podaj indeks od 0 do 9: ");
+	stdin.get(ind);
+	mov(ind,ebx);
+	mov(tab8[ebx*1],al);
+	mov(al,temp);
+	mov((type int32 temp),tab32[ebx*4]);
+	mov(0,ebx);
+	forever
+		stdout.put(tab32[ebx*4]," ");
+		inc(ebx);
+		breakif(ebx == 10);
+	endfor;
+	stdout.put(nl);
+end	ex1_task4;

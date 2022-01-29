@@ -1,0 +1,32 @@
+program ex2_task3;
+#include("stdlib.hhf");
+static
+	i: int32;
+	j: int32;
+	letter:	char := 'a';
+	tab: char[5,4];
+begin ex2_task3;
+	mov(letter,al);
+	for(mov(0,i);i<5;inc(i))do
+		for(mov(0,j);j<4;inc(j))do
+			mov(i,ebx);
+			intmul(4,ebx);
+			add(j,ebx);
+						
+			mov(al,tab[ebx*1]);
+			inc(al);
+
+		endfor;
+	endfor;
+	
+	for(mov(0,i);i<5;inc(i))do
+		for(mov(0,j);j<4;inc(j))do
+			mov(i,ebx);
+			intmul(4,ebx);
+			add(j,ebx);
+			stdout.putc(tab[ebx*1]);
+			stdout.put(" ");
+		endfor;
+		stdout.newln();
+	endfor;
+end ex2_task3;

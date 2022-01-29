@@ -1,0 +1,14 @@
+program moveaddsub;
+	#include ("stdlib.hhf");
+	static
+		a:	int8	:=	-7;
+		b:	int8	:=	6;
+		
+begin moveaddsub;
+	stdout.put("a = ",a,", b = ",b);
+	mov(b,al);
+	sub(al,a);
+	stdout.put(nl,"Roznica = ",a);
+	add(12,a);
+	stdout.put(nl,"Suma = ",a);
+end moveaddsub;

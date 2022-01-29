@@ -1,0 +1,11 @@
+program ex2task1;
+#include("stdlib.hhf");
+	static
+		number:	int32;
+begin ex2task1;
+	stdout.put("Podaj wartosc w zapisie szesnastkowym: ");
+	stdin.geth32();	
+	mov(eax,number);
+	stdout.put("Wyswietlenie wartosci w zapisie szesnastkowym: ");
+	stdout.puth32(number);
+end ex2task1;

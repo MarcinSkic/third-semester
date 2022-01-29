@@ -1,0 +1,6 @@
+procedure addition(a: int16; b: int16);
+begin addition;
+	mov(b,ax);
+	add(a,ax);
+	stdout.puti16(ax);
+end addition;

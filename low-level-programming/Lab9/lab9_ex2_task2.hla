@@ -1,0 +1,37 @@
+program lab9_ex2_task2;
+#include("stdlib.hhf");
+#include("calculator.hhf");
+static
+	choice : char;
+	a: int8;
+	b: int8;
+	
+begin lab9_ex2_task2;
+	stdout.put("Podaj liczby: ");
+	stdin.get(a);
+	stdin.get(b);
+	
+	stdout.put("Wybierz dzialanie (a - addition, s - subtraction, m - multiplication, d - division): ");
+	stdin.readLn();
+	
+	stdin.get(choice);
+	if(choice == 'a') then
+		movsx(a,cx);
+		movsx(b,dx);
+		addition(cx,dx);
+	elseif(choice == 's') then
+		movsx(a,cx);
+		movsx(b,dx);
+		subtraction(cx,dx);
+	elseif(choice == 'm') then
+		movsx(b,dx);
+		multiplication(a,dx);
+	elseif(choice == 'd') then
+		movsx(b,dx);
+		division(a,dx);
+	
+	else
+		stdout.put("Zly wybor");
+	endif;
+	
+end lab9_ex2_task2;

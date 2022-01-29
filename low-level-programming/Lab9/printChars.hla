@@ -1,0 +1,7 @@
+procedure printChars(amount: int8; c: char);
+begin printChars;
+	mov(amount,ah);
+	for(mov(0,al); al<ah ;inc(al)) do
+		stdout.put(c);
+	endfor;
+end printChars;

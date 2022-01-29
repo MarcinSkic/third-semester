@@ -1,0 +1,17 @@
+program ex3_task3;
+	#include("stdlib.hhf");
+	static
+	zmienna: int8;
+begin ex3_task3;
+	forever
+		try
+			stdout.put(nl,"Podaj liczbe w postaci 10: ");
+			stdin.get(zmienna);
+			break;
+		exception(ex.ConversionError)
+			stdout.put("ZLE!");
+		exception(ex.ValueOutOfRange)
+			stdout.put("ZLE!");
+		endtry;
+	endfor;
+end ex3_task3;

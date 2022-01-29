@@ -1,0 +1,15 @@
+program ex1_task3;
+#include("stdlib.hhf");
+static
+	zm1	:	int8	:=	22;
+begin ex1_task3;
+	shl(2,zm1);
+	stdout.put(zm1,nl);
+	
+	shr(3,zm1);
+	stdout.put(zm1,nl);
+	
+	mov(-40,zm1);
+	sar(2,zm1);
+	stdout.put(zm1);
+end ex1_task3;

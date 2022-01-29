@@ -1,0 +1,11 @@
+program ex1_task2;
+#include("stdlib.hhf");
+static
+	tab8:	int8[10] := [0,1,2,3,4,5,6,7,8,9];
+	ind:	int32;
+begin ex1_task2;
+	stdout.put("Podaj indeks od 0 do 9: ");
+	stdin.get(ind);
+	mov(ind,ebx);
+	stdout.put(tab8[ebx*1]);
+end	ex1_task2;

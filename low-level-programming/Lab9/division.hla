@@ -1,0 +1,10 @@
+procedure division(a: int8; b: int16);
+begin division;
+	mov(b,ax);
+	mov(a,bh);
+	div(bh,ax);
+	stdout.put("Wynik dzielenia: ");
+	stdout.puti8(al);
+	stdout.put(", reszta: ");
+	stdout.puti8(ah);
+end division;

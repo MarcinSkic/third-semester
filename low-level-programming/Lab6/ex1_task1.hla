@@ -1,0 +1,13 @@
+program ex1_task1;
+#include("stdlib.hhf");
+static
+zmienna : int32;
+begin ex1_task1;
+	mov(23,eax);
+	stdout.put("Podaj zmienna");
+	stdin.get(zmienna);
+	stdout.put("adres zmiennej ",&zmienna,nl);
+	mov(&zmienna, EBX);
+	mov(eax,[EBX]);
+	stdout.put(zmienna);
+end	ex1_task1;

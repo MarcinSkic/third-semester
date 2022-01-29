@@ -1,0 +1,16 @@
+program ex3_task2;
+#include( "stdlib.hhf" );
+
+begin ex3_task2;
+
+	stdout.put( "Wprowadz tekst: " );
+	stdin.flushInput();
+	
+	repeat
+		stdin.getc();
+		breakif(al == stdio.tab);
+		stdout.putc( al );
+		stdout.put( "=",al,nl );		
+	until( stdin.eoln());
+	
+end ex3_task2;
