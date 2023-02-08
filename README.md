@@ -9,6 +9,8 @@ Classes at the University I took in third semester
 - Math for IT specialists II
 - Basics of Electrical Engineering
 - Introduction to Databases
+<h6 align="right">*Git history dates rewritten to show when given semester took place</h6>
+
 ---
 ### Used technologies
 [<img align="left" width="26px" style="padding: 0 20px 20px 0" alt="c++" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"/>][cpp]
